@@ -10,7 +10,7 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const options = [
+const options = computed(() => [
   {
     label: t('tools.hash-text-encoding.option1'),
     value: 'Bin',
@@ -27,7 +27,7 @@ const options = [
     label: t('tools.hash-text-encoding.option4'),
     value: 'Base64url',
   },
-]
+])
 
 const algos = {
   MD5,
