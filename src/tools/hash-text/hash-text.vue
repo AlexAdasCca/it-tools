@@ -6,25 +6,21 @@ import InputCopyable from '../../components/InputCopyable.vue';
 import { convertHexToBin } from './hash-text.service';
 import { useQueryParam } from '@/composable/queryParams';
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
-
 const options = computed(() => [
   {
-    label: t('tools.hash-text-encoding.option1'),
+    label: $t('tools.hash-text-encoding.option1'),
     value: 'Bin',
   },
   {
-    label: t('tools.hash-text-encoding.option2'),
+    label: $t('tools.hash-text-encoding.option2'),
     value: 'Hex',
   },
   {
-    label: t('tools.hash-text-encoding.option3'),
+    label: $t('tools.hash-text-encoding.option3'),
     value: 'Base64',
   },
   {
-    label: t('tools.hash-text-encoding.option4'),
+    label: $t('tools.hash-text-encoding.option4'),
     value: 'Base64url',
   },
 ])
