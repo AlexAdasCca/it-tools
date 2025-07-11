@@ -48,8 +48,8 @@ const compareMatch = computed(() => compareSync(compareString.value, compareHash
       <n-form-item :label="$s('tools.bcrypt-card.label-string')" label-placement="left">
         <c-input-text v-model:value="compareString" :placeholder="$s('tools.bcrypt-card.comp-string')" raw-text />
       </n-form-item>
-      <n-form-item label="Your hash: " label-placement="left">
-        <c-input-text v-model:value="compareHash" :placeholder="$s('tools.bcrypt-card.comp-hash')" raw-text />
+      <n-form-item label="$s('tools.bcrypt-card.comp-hash-label')" label-placement="left">
+        <c-input-text v-model:value="compareHash" :placeholder="$s('tools.bcrypt-card.comp-hash-input')" raw-text />
       </n-form-item>
       <n-form-item :label="$s('tools.bcrypt-card.hash-matched')" label-placement="left" :show-feedback="false">
         <div class="compare-result" :class="{ positive: compareMatch }">

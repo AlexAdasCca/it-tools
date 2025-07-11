@@ -132,8 +132,9 @@ tools:
     label-salt-count: 盐计数：
     label-salt-round: 盐迭代次数
     comp-title: 比较字符串哈希
+    comp-hash-label: 哈希值：
     comp-string: 输入您需要进行比较的字符串...
-    comp-hash: 输入需要用于核对的哈希值...
+    comp-hash-input: 输入需要用于核对的哈希值...
     hash-matched: 它们匹配吗？ 
 
   crontab-generator:

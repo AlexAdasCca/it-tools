@@ -134,8 +134,9 @@ tools:
     label-salt-count: 'Salt count:'
     label-salt-round: Salt rounds
     comp-title: Compare string with hash
+    comp-hash-label: 'Your hash: '
     comp-string: Your string to compare...
-    comp-hash: Your hash to compare...
+    comp-hash-input: Your hash to compare...
     hash-matched: Do they match ? 
 
   crontab-generator:
