@@ -317,6 +317,13 @@ tools:
     placeholder: 你的字符串哈希...
     label: '你需要计算哈希值的文本:'
 
+  hash-text-encoding:
+    label: 哈希编码格式
+    option1: 二进制
+    option2: 十六进制
+    option3: Base64
+    option4: Base64url（URL安全字符）
+
   json-to-toml:
     title: JSON 转 TOML
     description: 解析JSON并将其转换为TOML。

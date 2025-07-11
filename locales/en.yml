@@ -320,6 +320,13 @@ tools:
   hash-text-input:
     placeholder: Your string to hash...
     label: 'Your text to hash:'
+  
+  hash-text-encoding:
+    label: Digest encoding
+    option1: Binary (base 2)
+    option2: Hexadecimal (base 16)
+    option3: Base64 (base 64)
+    option4: Base64url (base 64 with url safe chars)
 
   json-to-toml:
     title: JSON to TOML

@@ -34,6 +34,31 @@ function formatWithEncoding(words: lib.WordArray, encoding: Encoding) {
 const hashText = (algo: AlgoNames, value: string) => formatWithEncoding(algos[algo](value), encoding.value);
 </script>
 
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+const options = [
+  {
+    label: t('tools.hash-text-encoding.option1'),
+    value: 'Bin',
+  },
+  {
+    label: t('tools.hash-text-encoding.option2'),
+    value: 'Hex',
+  },
+  {
+    label: t('tools.hash-text-encoding.option3'),
+    value: 'Base64',
+  },
+  {
+    label: t('tools.hash-text-encoding.option4'),
+    value: 'Base64url',
+  },
+]
+</script>
+
 <template>
   <div>
     <c-card>
@@ -49,25 +74,8 @@ const hashText = (algo: AlgoNames, value: string) => formatWithEncoding(algos[al
       <c-select
         v-model:value="encoding"
         mb-4
-        label="Digest encoding"
-        :options="[
-          {
-            label: 'Binary (base 2)',
-            value: 'Bin',
-          },
-          {
-            label: 'Hexadecimal (base 16)',
-            value: 'Hex',
-          },
-          {
-            label: 'Base64 (base 64)',
-            value: 'Base64',
-          },
-          {
-            label: 'Base64url (base 64 with url safe chars)',
-            value: 'Base64url',
-          },
-        ]"
+        :label="$t('tools.hash-text-encoding.label')"
+        :options="options"
       />
 
       <div v-for="algo in algoNames" :key="algo" style="margin: 5px 0">
