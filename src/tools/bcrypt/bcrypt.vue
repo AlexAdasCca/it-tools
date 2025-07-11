@@ -8,7 +8,9 @@ const themeVars = useThemeVars();
 const input = ref('');
 const saltCount = ref(10);
 const hashed = computed(() => hashSync(input.value, saltCount.value));
-const { copy } = useCopy({ source: hashed, text: $s('tools.bcrypt-card.copy-tooltip') });
+
+const { t } = useI18n()
+const { copy } = useCopy({ source: hashed, text: t('tools.bcrypt-card.copy-tooltip') });
 
 const compareString = ref('');
 const compareHash = ref('');
