@@ -124,6 +124,19 @@ tools:
   bcrypt:
     title: Bcrypt
     description: Hash and compare text string using bcrypt. Bcrypt is a password-hashing function based on the Blowfish cipher.
+  
+  bcrypt-card:
+    title: Hash
+    copy-button: Copy hash
+    copy-tooltip: Hashed string copied to the clipboard
+    in-bcrypt: Your string to bcrypt...
+    label-string: 'Your string:'
+    label-salt-count: 'Salt count:'
+    label-salt-round: Salt rounds
+    comp-title: Compare string with hash
+    comp-string: Your string to compare...
+    comp-hash: Your hash to compare...
+    hash-matched: Do they match ? 
 
   crontab-generator:
     title: Crontab generator

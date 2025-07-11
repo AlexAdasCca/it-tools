@@ -122,6 +122,19 @@ tools:
   bcrypt:
     title: 加密
     description: 使用bcrypt对文本字符串进行哈希和比较。Bcrypt是一个基于Blowfish密码的密码哈希函数。
+  
+  bcrypt-card:
+    title: 哈希
+    copy-button: 复制哈希值
+    copy-tooltip: 哈希字符串已经复制到剪贴板！
+    in-bcrypt: 输入需要加密的字符串...
+    label-string: 您输入的字符串：
+    label-salt-count: 盐计数：
+    label-salt-round: 盐迭代次数
+    comp-title: 比较字符串哈希
+    comp-string: 输入您需要进行比较的字符串...
+    comp-hash: 输入需要用于核对的哈希值...
+    hash-matched: 它们匹配吗？ 
 
   crontab-generator:
     title: Crontab 表达式生成
