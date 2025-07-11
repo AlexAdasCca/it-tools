@@ -312,9 +312,10 @@ tools:
   hash-text:
     title: Hash 文本
     description: '使用所需的函数哈希文本字符串：MD5、SHA1、SHA256、SHA224、SHA512、SHA384、SHA3或RIPEMD160'
-    input:
+  
+  hash-text.input:
       placeholder: 你的字符串哈希...
-      label: 你需要计算哈希值的文本:
+      label: '你需要计算哈希值的文本:'
 
   json-to-toml:
     title: JSON 转 TOML
