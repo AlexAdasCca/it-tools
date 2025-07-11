@@ -6,6 +6,29 @@ import InputCopyable from '../../components/InputCopyable.vue';
 import { convertHexToBin } from './hash-text.service';
 import { useQueryParam } from '@/composable/queryParams';
 
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+const options = [
+  {
+    label: t('tools.hash-text-encoding.option1'),
+    value: 'Bin',
+  },
+  {
+    label: t('tools.hash-text-encoding.option2'),
+    value: 'Hex',
+  },
+  {
+    label: t('tools.hash-text-encoding.option3'),
+    value: 'Base64',
+  },
+  {
+    label: t('tools.hash-text-encoding.option4'),
+    value: 'Base64url',
+  },
+]
+
 const algos = {
   MD5,
   SHA1,
@@ -34,30 +57,6 @@ function formatWithEncoding(words: lib.WordArray, encoding: Encoding) {
 const hashText = (algo: AlgoNames, value: string) => formatWithEncoding(algos[algo](value), encoding.value);
 </script>
 
-<script setup>
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
-
-const options = [
-  {
-    label: t('tools.hash-text-encoding.option1'),
-    value: 'Bin',
-  },
-  {
-    label: t('tools.hash-text-encoding.option2'),
-    value: 'Hex',
-  },
-  {
-    label: t('tools.hash-text-encoding.option3'),
-    value: 'Base64',
-  },
-  {
-    label: t('tools.hash-text-encoding.option4'),
-    value: 'Base64url',
-  },
-]
-</script>
 
 <template>
   <div>
