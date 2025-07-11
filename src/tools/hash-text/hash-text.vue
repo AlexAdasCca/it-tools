@@ -38,7 +38,7 @@ const hashText = (algo: AlgoNames, value: string) => formatWithEncoding(algos[al
   <div>
     <c-card>
       <c-input-text v-model:value="clearText" multiline raw-text :placeholder="$t('hash-text-input.placeholder')" rows="3" autosize autofocus :label="$t('hash-text-input.label')" />
-
+      <p>Test i18n: {{ $t('hash-text-input.placeholder') }}</p>
       <n-divider />
 
       <c-select
